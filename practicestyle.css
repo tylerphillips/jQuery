@@ -26,17 +26,45 @@ h3 {
 	font-family:futura;
 }
 
+h6 {
+	margin-left: 80px;
+	color: rgba(247,239,225,1);
+	padding: -5px 20px;
+	top: 5px;
+	font-size: 34px;
+	position: relative;
+	margin-top: 8px;
+	text-transform: uppercase;
+	font-family: 'LimeLight', cursive;
+	margin-bottom: -2px;
+	text-shadow: 2px 2px 10px #0F0E04;
+}
+
+h4 {
+	font-family: futura;
+	color: black;
+	font-size: 16px;
+}
+
 h5 {
 	font-size: 25px;
 	margin-top: -25px;
 }
+
+ul {
+	margin-left: 80px;
+}
+
 .primary-header {
-	background-image: linear-gradient(rgb(255, 238, 0) 0%, rgb(232, 181, 0) 59%, rgb(232, 181, 0) 100%);
+	background: linear-gradient(to bottom, rgba(255,183,107,1) 0%,rgba(234,153,91,1) 16%,rgba(206,129,61,1) 34%,rgba(193,115,60,1) 50%,rgba(181,92,41,1) 75%,rgba(155,69,35,1) 100%);
+	/*background-image: linear-gradient(rgb(255, 238, 0) 0%, rgb(232, 181, 0) 59%, rgb(232, 181, 0) 100%);*/
 	font-family: 'LimeLight', cursive;
 	position: relative;
   	z-index: 10;
   	padding-top: 35px;
 	margin-top: -10px;
+	border-bottom: solid;
+	border-bottom-width: 5px;
 }
 
 .title-header {
@@ -88,17 +116,23 @@ h5 {
 	display: inline-block;
 	margin-top: 20px;
 	width: 190px;
-	height: 60px;
+	height: 410px;
 	margin-left: 85px;
 }
 .info-input input {
-  padding: 10px 18px;
-  border-radius: 8px 0 0 8px;
-  border: 1px solid #acacac;
-  border-top: 1px solid #808080;
-  box-shadow: inset 0px 2px 3px -2px #424242;
-  font-size: 17px;
-  display: inline-block;
+  	margin-top: 14px;
+	width: 310px;
+	padding: 14px 35px;
+	border-radius: 8px 40px 8px 40px;
+	border: 1px solid rgb(155, 69, 35);
+	border-top: 2px solid rgb(117, 51, 25);
+	box-shadow: inset 0px 2px 3px -2px #424242;
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-family: futura;
+	display: inline-block;
+	font-weight: lighter;
+
 }
 
 .button {
@@ -110,12 +144,14 @@ h5 {
 	text-shadow: -1px -1px rgb(116, 80, 3);
 	color: white;
 	border-radius: 6px;
-	width: 99px;
+	width: 140px;
 	height: 37px;
 	padding-top: 7px;
 	padding-bottom: 0px;
-	box-shadow: inset -2px -3px 0px rgb(116, 80, 3);
+	box-shadow: inset -1px -1px 0px rgb(116, 80, 3);
 	margin-top: 20px;
+	margin-left: 105px;
+	font-family: futura;
 }
 
 .button:hover {
@@ -125,6 +161,8 @@ h5 {
   -webkit-transform: all 15.0s ease-in-out;
   cursor: pointer;
 }
+
+
 
 .submit {
 	display: inline-block;
@@ -151,12 +189,12 @@ h5 {
 }
 .output {
 	font-family: 'LimeLight', cursive;
-	position: absolute;
 	font-size: 27px;
-	text-align: center;
-	line-height: 82px;
+	line-height: 70px;
+	margin-top: 53px;
 	display: inline-block;
-	top: 230px;
+	margin-left: -35px;
+	text-align: left;
 	}
 button {
 	display: inline-block;
@@ -229,7 +267,11 @@ button:hover {
 	z-index: 1000;
 	background-color: rgba(0,0,0,.4);
 	overflow: auto;
+	-webkit-transition: -webkit-transform;
+	-webkit-transiton: all 3.6s ease-in-out;
 }
+
+#overlay:active
 
 #overlay div {
   padding: 10px;
@@ -273,8 +315,77 @@ button:hover {
 	display: inline-block;
 	position: relative;
 	left: 160px;
-	top:-50px;
+	top:-35px;
 }
+
+.add-flair {
+	position: absolute;
+	margin-left: 10px;
+	box-shadow: inset -2px -3px 0px rgb(116, 80, 3);
+	border: 1px solid rgb(163, 137, 31);
+
+}
+
+.add-user {
+	position: absolute;
+	height: 46px;
+	padding-bottom: 10px;
+	margin-left: 160px;
+}
+
+.output-fields {
+	text-align: center;
+	margin-top: 66px;
+	font-size: 23px;
+	position: absolute;
+	line-height: 46px;
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.users-list {
+	background: linear-gradient(to bottom, rgba(255,183,107,1) 0%,rgba(234,153,91,1) 16%,rgba(206,129,61,1) 34%,rgba(193,115,60,1) 50%,rgba(181,92,41,1) 75%,rgba(155,69,35,1) 100%);
+	margin-left: 0px;
+	display: inline-block;
+	width: 965px;
+	border-top: solid;
+	border-top-width: 5px;
+}
+
+.preview-name {
+	/*background: linear-gradient(to bottom, rgba(255,183,107,1) 0%,rgba(234,153,91,1) 16%,rgba(206,129,61,1) 34%,rgba(193,115,60,1) 50%,rgba(181,92,41,1) 75%,rgba(155,69,35,1) 100%);*/
+	margin-left: 0px;
+	color: 
+	padding: -5px 20px;
+	top: 5px;
+	font-size: 34px;
+	position: relative;
+	margin-top: 8px;
+	text-transform: uppercase;
+	font-family: 'LimeLight', cursive;
+	margin-bottom: -2px;
+	text-shadow: 2px 2px 10px #0F0E04;
+	/*color: rgb(185, 97, 38)*/
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: -2px;
+	border-radius: 25px 5px 25px 5px;
+	background: linear-gradient(to bottom, rgba(255,183,107,1) 0%,rgba(234,153,91,1) 16%,rgba(206,129,61,1) 34%,rgba(193,115,60,1) 50%,rgba(181,92,41,1) 75%,rgba(155,69,35,1) 100%);
+	color: rgba(247,239,225,1);
+}
+
+.name-deco {
+	
+
+}
+	/*background: rgb(255, 255, 255);
+	border-radius: 20px;
+	border: 1px solid rgb(155, 69, 35);
+	border-top: 2px solid rgb(114, 51, 26);
+	box-shadow: inset 0px 2px 3px -2px #424242;
+	width: 400px;
+	height: 410px;*/
+
 
 /* This gives us the styling for the background */
   

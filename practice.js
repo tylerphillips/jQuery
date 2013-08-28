@@ -1,22 +1,82 @@
+var usersCollection = [] 
+
 $(document).ready(function() {
 
 	$('.button').click(function(){
-	    var nameValue = $('.name').val();
+	    var nameValue = $('.name-input').val();
 	    $('.preview-name').text(nameValue);
 
-	    var nameValue = $('.birthday').val();
+	    var nameValue = $('.birthday-input').val();
 	    $('.preview-birthday').text(nameValue);
 
-	    var nameValue = $('.hometown').val();
+	    var nameValue = $('.hometown-input').val();
 	    $('.preview-hometown').text(nameValue);
 
-	    var nameValue = $('.job').val();
+	    var nameValue = $('.job-input').val();
 	    $('.preview-job').text(nameValue);
 
 		var nameValue = $('.tele').val();
 	    $('.preview-tele').text(nameValue);
-	})
+	});
+
+	$('.add-user').click(function(){
+  	usersCollection.push(getFormValues());
+  	
+  	updateUserList(usersCollection);
+  	// Calling a function called updateUserList and passing in a variable called usersCollection
+
+  });
+
 });
+
+// this checks if inputs are empty
+// make sure you have if (validateForm) in your initial function
+// function validateForm (){
+// 	// reset status
+// 	var good=true																				
+// 	$('.errormessage-left').removeClass('active-left')
+// 	$('input').removeClass("warning")
+// 	$('input').each(function(){
+// 		if ($(this).val() == "") {
+// 			console.log("found a bad one");
+// 			good=false
+// 			$(this).addClass("warning")
+// 			$('.errormessage-left').	addClass('active-left')
+// 		}
+// 	})
+// 	console.log(good)
+// 	return good
+// };
+
+function getFormValues () {
+	var nameVal 	= $('.name-input').val();
+	var birthVal 	= $('.birthday-input').val();
+	var homeVal 	= $('.hometown-input').val();
+	var jobVal 		= $('.job-input').val();
+	var teleVal 	= $('.tele').val();
+
+	var formData = {
+		name: nameVal,
+		birthday: birthVal,
+		hometown: homeVal,
+		job: jobVal,
+		phone: teleVal
+	}
+
+	return formData;
+};
+
+function updateUserList (list) {
+	var ul = $('.users-list ul');
+	ul.html('');
+
+list.forEach(function(user, index){
+	var text = "<li>User #"+ index + ' -'  + user.name + "</li>"
+	console.log(index)
+	ul.append(text);
+
+	})
+}
 
 function overlay() {
 	el = document.getElementById("overlay");
@@ -27,7 +87,6 @@ function overlayback() {
 	el = document.getElementById("overlayback");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 };
-
 
 // Can only use numbers in telephone
 $("#telephone").keydown(function(event) {

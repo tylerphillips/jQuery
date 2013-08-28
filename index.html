@@ -53,58 +53,62 @@
 
 
 			<div class="info-input">
-		        <input class="name" type="text" placeholder="Full Name">
-		    </div>
-			
-			<a href="#">
-				<div class="button">
-					Add Flair
-				</div>
-			</a>	
+		        <input class="name-input" type="text" placeholder="Full Name">
+			        <!-- <div class="button">
+						Add Flair
+					</div> -->
+		     	<input class="birthday-input" placeholder="Date of Birth">
+		     		<!-- <div class="Button">Add Flair</div> -->
+				<input class="hometown-input" placeholder="Hometown">
+					<!-- <div class="Button">Add Flair</div> -->
+				<input class="job-input" placeholder="Occupation">
+					<!-- <div class="Button">Add Flair</div> -->
+				<div id="telephone"><input class="tele" placeholder="Telephone Number"></div>
+					<!-- <div class="button add-flair">Add Flair</div> -->
 
-		    <div class="info-input">
-		        <input class="birthday" placeholder="Date of Birth">
-		    </div>
-		    <div class="Button">Add Flair</div>
+				<button class="button add-user">Add User</button>
 
-		    <div class="info-input">
-		        <input class="hometown" placeholder="Hometown">
-		    </div>
-		    <div class="Button">Add Flair</div>
 
-		    <div class="info-input">
-		        <input class="job" placeholder="Occupation">
-		    </div>
-		    <div class="Button">Add Flair</div>
-
-		    <div class="info-input">
-		        <div id="telephone"><input class="tele" placeholder="Telephone Number">
-		    </div></div>
-		    <div class="Button">Add Flair</div>
-		</div>    	
-
+			</div>
+		</div>
 		<div class="container-right">
 			<div class="right-header">
 				<h2>Pulchritudinous Profile Preview</h2>
 			</div>
 
 			<div class="update"><button onClick="alert( 'Thank you for submitting your profile. *NOTICE* Profile may take a couple of minutes before updated changes appear.' );">Upload Profile</button></div>
+			<div class="output-fields">
+					<p>My name is</p>
+					<p>I was born on</p>
+					<p>I am from</p>
+					<p>My current occupation is</p>
+					<p>I can be reached at</p>
+
+			</div>
+
 			<div class="output">
-				
 				<!-- <div> Name </div> -->
-				<div class="preview-name"></div>
+				<!-- <div class="name-deco"> --><div class="preview-name"></div><!-- </div> -->
 				<!-- <div> Birthday </div> -->
 				<div class="preview-birthday"></div>
 				<!-- <div> Hometown </div> -->
 				<div class="preview-hometown"></div>
 				<div class="preview-job"></div><div class="preview-tele"></div>
 				<!-- <a href="javascript:alert( 'Hello World' );">Click Me!</a> -->
-				
-			</div>
-			
-		</div>
+			</div>	
 		
+				
+		
+		</div>
+			
+		<div class="users-list">
+			<h6>User List</h6>
+			<ul>
 
+			</ul>
+
+		</div>		
+	
 	</div>
 
 	<script src="jquery-2.0.3.min.js"></script>
