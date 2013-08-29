@@ -105,6 +105,9 @@ ul {
 
 .left-header {
 	text-align: center;
+	display: inline-block;
+	width: 470px;
+	margin-right: 20px;
 }
 
 .right-header {
@@ -115,9 +118,9 @@ ul {
 .info-input {
 	display: inline-block;
 	margin-top: 20px;
-	width: 190px;
+	width: 310px;
 	height: 410px;
-	margin-left: 85px;
+	margin-left: 0px;
 }
 .info-input input {
   	margin-top: 14px;
@@ -256,7 +259,7 @@ button:hover {
 
 }
 
-#overlay {
+/*#overlay {
     visibility: hidden;
     position: absolute;
 	left: 0;
@@ -271,9 +274,9 @@ button:hover {
 	-webkit-transiton: all 3.6s ease-in-out;
 }
 
-#overlay:active
+*/
 
-#overlay div {
+/*#overlay div {
   padding: 10px;
 	width: 500px;
 	margin: 100px auto;
@@ -284,9 +287,9 @@ button:hover {
 	box-shadow: 2px 2px 15px black;
 
 
-}
+}*/
 
-.please {
+.modal-active {
 	margin-left: 92px;
 }
 
@@ -295,14 +298,14 @@ button:hover {
 
 }*/
 
-.overlayback {	
+/*.overlayback {	
 	visibility: hidden;
     position: absolute;
 	
 	width: 100%;
 	height:100%;
 	overflow: auto
-}
+}*/
 
 .terms {
 	font-weight:bold;
@@ -350,6 +353,7 @@ button:hover {
 	width: 965px;
 	border-top: solid;
 	border-top-width: 5px;
+	font-size: 18px;
 }
 
 .preview-name {
@@ -377,6 +381,49 @@ button:hover {
 .name-deco {
 	
 
+}
+
+#modal .contents {
+	font-family: futura;
+	padding: 24px;
+}
+
+#blind {
+   /* position element so the z-index can be set */
+   position:absolute;
+   /* set z-index so the blind will cover all page content */
+   z-index:9999;
+   /* set the top, left, width and height so the blind covers the browser window */
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   /* set the background to a suitably dark tone */
+   background-color:#000000;
+}
+
+#modal .window {
+
+	opacity: 0;
+  position: absolute;
+	z-index: 10000;
+	width: 400px;
+	height: 248px;
+	top: 200px;
+	left: 390px; 
+   /* color the background so it shows up */
+   background-color:#ffffff;
+   /* throw on a CSS3 box shadow, because it's cool, and we can */
+   box-shadow:4px 4px 80px #000;
+   -webkit-box-shadow:4px 4px 80px #000;
+   -moz-box-shadow:4px 4px 80px #000;
+}
+
+.modalLink {
+	font-family: futura;
+	color: black;
+	font-size: 16px;
+	margin-left: 93px;
 }
 	/*background: rgb(255, 255, 255);
 	border-radius: 20px;
